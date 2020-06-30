@@ -17,19 +17,19 @@ from django.conf.urls import url, include
 from django.urls import path
 from django.contrib import admin
 
-#from .views import check_token
+from .views import check_token
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    #url(r'^api/login/', include('rest_social_auth.urls_jwt')),
+    url(r'^api/login/', include('rest_social_auth.urls_jwt')),
     url(r'^api/login/', include('rest_social_auth.urls_token')),
-    #url(r'^api/login/', include('rest_social_auth.urls_session')),
+    url(r'^api/login/', include('rest_social_auth.urls_session')),
     
     
     #url(r'^auth/', include('rest_framework_social_oauth2.urls')),
-    #url(r'api/check/', check_token),
+    url(r'api/check/', check_token),
 
   path('', include('social_django.urls', namespace='social')),
 ]

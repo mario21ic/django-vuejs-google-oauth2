@@ -31,7 +31,7 @@ Vue.use(VueAuthenticate, {
       clientId: '284367917827-6roqtmiln7t8g6k7m0pfkdqtj6jnsv83.apps.googleusercontent.com',
       redirectUri: 'http://localhost:8080',
       redirect_uri: 'http://localhost:8080',
-      url: 'http://localhost:8000/api/login/social/token_user/google-oauth2/',
+      url: 'http://localhost:8000/api/login/social/token_user/',
     }
   }
 });

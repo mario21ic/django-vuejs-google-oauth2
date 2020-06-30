@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-from mongoengine import *
+# from mongoengine import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'qchs3h+&dfrk+f02l&=2@$^&fi%&1z+m7l*pjydhd0)1a-ri9j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -126,14 +126,14 @@ DATABASES = {
     }
 }
 
-connect(
-   db='mytokens',
-   username='',
-   password='',
-   host='mongodb://localhost',
-   port=27017,
-   alias="mongo"
-)
+# connect(
+#    db='mytokens',
+#    username='',
+#    password='',
+#    host='mongodb://localhost',
+#    port=27017,
+#    alias="mongo"
+# )
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -178,11 +178,11 @@ STATIC_URL = '/static/'
 # # # # # # # # # # # # # # # # # # # # # # # #
 # NOTE: Update this fields for production setup
 # # # # # # # # # # # # # # # # # # # # # # # #
-LOGIN_URL = '/auth/login/google-oauth2/'
+# LOGIN_URL = '/auth/login/google-oauth2/'
 
 # LOGIN_REDIRECT_URL = '/dashboard'  # TODO update
-LOGIN_REDIRECT_URL = 'http://localhost:8080/'  # TODO update
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'http://localhost:8080'  # TODO update
+LOGOUT_REDIRECT_URL = 'http://localhost:8080/logout'
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 

@@ -10,6 +10,6 @@ from rest_framework.authtoken.models import Token
 def check_token(request, format=None):
     print("request:", request)
     print("format:", format)
-    token = Token.objects.filter(key = request.data['token']).exists()
+    token = Token.objects.filter(key=request.data['token']).exists()
     return JsonResponse({"status": token})
 
