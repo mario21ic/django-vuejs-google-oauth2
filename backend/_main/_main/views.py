@@ -5,9 +5,11 @@ from django.http import HttpResponse, JsonResponse
 import json
 from rest_framework.authtoken.models import Token
 
-#@csrf_exempt
-#@api_view(['POST'])
-#def check_token(request, format=None):
-#     token = Token.objects.filter(key = request.data['token']).exists()
-#     return JsonResponse({"status": token})
+@csrf_exempt
+@api_view(['POST'])
+def check_token(request, format=None):
+    print("request:", request)
+    print("format:", format)
+    token = Token.objects.filter(key = request.data['token']).exists()
+    return JsonResponse({"status": token})
 

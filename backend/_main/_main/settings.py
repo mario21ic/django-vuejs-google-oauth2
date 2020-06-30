@@ -180,7 +180,8 @@ STATIC_URL = '/static/'
 # # # # # # # # # # # # # # # # # # # # # # # #
 LOGIN_URL = '/auth/login/google-oauth2/'
 
-LOGIN_REDIRECT_URL = '/dashboard'  # TODO update
+# LOGIN_REDIRECT_URL = '/dashboard'  # TODO update
+LOGIN_REDIRECT_URL = 'http://localhost:8080/'  # TODO update
 LOGOUT_REDIRECT_URL = '/'
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
