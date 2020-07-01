@@ -28,12 +28,12 @@ Vue.use(VueAxios, axios)
 Vue.use(VueAuthenticate, {
   providers: {
     google: {
-      clientId: '284367917827-6roqtmiln7t8g6k7m0pfkdqtj6jnsv83.apps.googleusercontent.com',
+      clientId: '',
       redirectUri: 'http://localhost:8080',
-      redirect_uri: 'http://localhost:8080',
       url: 'http://localhost:8000/api/login/social/token_user/',
+      tokenPath: 'token',
     }
-  }
+  },
 });
 
 const router = new VueRouter({

@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'qchs3h+&dfrk+f02l&=2@$^&fi%&1z+m7l*pjydhd0)1a-ri9j'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -59,6 +59,7 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''
 SOCIAL_AUTH_GOOGLE_OAUTH2_FIELDS = ['email', 'username']  # optional
+REST_SOCIAL_OAUTH_ABSOLUTE_REDIRECT_URI = 'http://localhost:8080'
 CSRF_COOKIE_SECURE = True
 CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = '_main.urls'
